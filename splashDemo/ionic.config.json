@@ -1,0 +1,8 @@
+{
+  "name": "splashDemo",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
