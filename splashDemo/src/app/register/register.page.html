@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color=primary>
+    <ion-title>
+      TuristView - Registrarse
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/..">
+        <ion-icon name="arrow-back" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>
+      Nombres
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      Apellidos
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      Correo
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      Contrasena
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      Repetir contrasena
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <section>
+    <ion-button size="medium" (click)="onRegister()">Registrarse</ion-button>
+  </section>
+  
+</ion-content>
