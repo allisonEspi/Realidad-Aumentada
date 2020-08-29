@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'reset-pass',
     loadChildren: () => import('./reset-pass/reset-pass.module').then( m => m.ResetPassPageModule)
+  },
+  {
+    path: 'favoritos',
+    loadChildren: () => import('./favoritos/favoritos.module').then( m => m.FavoritosPageModule)
   }
 ];
 

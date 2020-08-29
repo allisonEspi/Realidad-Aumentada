@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { AuthService } from "src/app/services/auth.service";
+
 import { Router } from "@angular/router"
 
 
@@ -46,8 +46,7 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar,
-    private authservice:AuthService
+    private statusBar: StatusBar
   ) {
     this.initializeApp();
   }
@@ -67,7 +66,5 @@ export class AppComponent implements OnInit {
     }
   }
 
-  logout(){
-    this.authservice.logout();
-  }
+  
 }
