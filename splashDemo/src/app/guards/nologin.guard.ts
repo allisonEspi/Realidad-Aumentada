@@ -22,7 +22,7 @@ export class NologinGuard implements CanActivate {
         if (isNullOrUndefined(auth)){
           return true;
         }
-        this.router.navigate(['/folder/Vista'])
+        this.router.navigate(['/folder'])
         return false;
       }))
       

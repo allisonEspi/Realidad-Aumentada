@@ -17,27 +17,27 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'Locales cercanos',
-      url: '/folder/Vista',
-      icon: 'tablet-portrait'
+      url: '/folder',
+      icon: 'locate'
     },
     {
       title: 'Escanear Imagen',
-      url: '/folder/Escaner',
-      icon: 'md-qr-scanner'
+      url: '/escanner',
+      icon: 'scan'
     },
     {
       title: 'Favoritos',
-      url: '/folder/Favoritos',
+      url: '/favoritos',
       icon: 'heart'
     },
     {
       title: 'Perfil',
-      url: '/folder/Perfil',
+      url: '/perfil',
       icon: 'person'
     },
     {
       title: 'Notificaciones',
-      url: '/folder/Notificaciones',
+      url: '/notificaciones',
       icon: 'notifications'
     }
   ];

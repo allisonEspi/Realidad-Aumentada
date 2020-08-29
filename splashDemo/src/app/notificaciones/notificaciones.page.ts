@@ -3,14 +3,13 @@ import { AuthService } from "src/app/services/auth.service";
 
 
 @Component({
-  selector: 'app-favoritos',
-  templateUrl: './favoritos.page.html',
-  styleUrls: ['./favoritos.page.scss'],
+  selector: 'app-notificaciones',
+  templateUrl: './notificaciones.page.html',
+  styleUrls: ['./notificaciones.page.scss'],
 })
-export class FavoritosPage implements OnInit {
+export class NotificacionesPage implements OnInit {
 
   constructor(private authservice:AuthService) { }
-
 
   ngOnInit() {
   }

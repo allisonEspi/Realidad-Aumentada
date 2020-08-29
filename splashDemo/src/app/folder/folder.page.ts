@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AuthService } from "src/app/services/auth.service";
+import { PhotoService } from '../services/camara.service';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-folder',
@@ -10,13 +12,15 @@ import { AuthService } from "src/app/services/auth.service";
 export class FolderPage implements OnInit {
   public folder: string;
 
-  constructor(private activatedRoute: ActivatedRoute, private authservice:AuthService) { }
+  constructor(private activatedRoute: ActivatedRoute, private authservice:AuthService,public photoService: PhotoService) { }
 
   ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
-  }
+    }
   logout(){
     this.authservice.logout();
+  }
+  addPhotoToGallery() {
+    this.photoService.addNewToGallery();
   }
 
 }

@@ -3,17 +3,17 @@ import { AuthService } from "src/app/services/auth.service";
 
 
 @Component({
-  selector: 'app-favoritos',
-  templateUrl: './favoritos.page.html',
-  styleUrls: ['./favoritos.page.scss'],
+  selector: 'app-perfil',
+  templateUrl: './perfil.page.html',
+  styleUrls: ['./perfil.page.scss'],
 })
-export class FavoritosPage implements OnInit {
+export class PerfilPage implements OnInit {
 
   constructor(private authservice:AuthService) { }
 
-
   ngOnInit() {
   }
+
   logout(){
     this.authservice.logout();
   }

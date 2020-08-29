@@ -14,7 +14,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
+    path: 'folder',
     canActivate: [AuthGuard],
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
@@ -33,7 +33,23 @@ const routes: Routes = [
   },
   {
     path: 'favoritos',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./favoritos/favoritos.module').then( m => m.FavoritosPageModule)
+  },
+  {
+    path: 'escanner',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./escanner/escanner.module').then( m => m.EscannerPageModule)
+  },
+  {
+    path: 'perfil',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'notificaciones',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./notificaciones/notificaciones.module').then( m => m.NotificacionesPageModule)
   }
 ];
 
