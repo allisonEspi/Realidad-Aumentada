@@ -10,22 +10,22 @@
     <ion-label>
       Correo
     </ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="email" name="email" required="true"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>
       Contrasena
     </ion-label>
-    <ion-input type="text" ></ion-input>
+      <ion-input [(ngModel)]="password" type="password" name="password" required="true"></ion-input>
   </ion-item>
   <section>
-    <ion-button expand="block" routerLink='/folder/inbox'>Ingresar</ion-button>
+    <ion-button expand="block" (click)="doLogin()">Ingresar</ion-button>
   </section>
   <ion-item-divider>
     <ion-item>
       <ion-label floating><a routerLink="/register">Registrarse</a></ion-label>
       <ion-label floating class="textoCentral">o</ion-label>
-      <ion-label text-wrap  class="textoCentral"><a routerLink="/">Recuperar Contrasena</a></ion-label>
+      <ion-label text-wrap  class="textoCentral"><a routerLink="/reset-pass">Recuperar Contrasena</a></ion-label>
     </ion-item>
   </ion-item-divider>
   <section>
@@ -38,11 +38,6 @@
       <ion-icon name="logo-facebook"></ion-icon>
   </ion-button>
   </section>
-  <section>
-    <ion-button expand="block" class="twitter ">
-      Registarse&nbsp;
-      <ion-icon name="logo-twitter"></ion-icon>
-    </ion-button>
-  </section>
+  
 
 </ion-content>

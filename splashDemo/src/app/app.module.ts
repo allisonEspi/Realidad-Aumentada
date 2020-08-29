@@ -9,6 +9,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+//firebase config
+import { AngularFirestoreModule } from "@angular/fire/firestore"; //Modulo Firestore (BD)
 import { firebaseConfig } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -25,6 +27,7 @@ import { Facebook,  } from '@ionic-native/facebook/ngx';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp(firebaseConfig), //Modulo 1 a importa
     AngularFireAuthModule // Modulo 2 a importar
   ], 
