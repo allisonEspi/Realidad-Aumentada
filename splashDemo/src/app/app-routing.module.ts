@@ -22,7 +22,20 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  }
+  },
+  {
+    path: 'tab1',
+    loadChildren: () => import('./tab1/tab1.module').then( m => m.Tab1PageModule)
+  },  {
+    path: 'local',
+    loadChildren: () => import('./local/local.module').then( m => m.LocalPageModule)
+  },
+  {
+    path: 'scanner',
+    loadChildren: () => import('./scanner/scanner.module').then( m => m.ScannerPageModule)
+  },
+
+
 ];
 
 @NgModule({

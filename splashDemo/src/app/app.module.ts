@@ -18,6 +18,7 @@ import { Facebook,  } from '@ionic-native/facebook/ngx';
 
 
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -33,6 +34,7 @@ import { Facebook,  } from '@ionic-native/facebook/ngx';
     StatusBar,
     SplashScreen,
     GooglePlus,
+    
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

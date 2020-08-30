@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "979484860170",
+    "firebase_url": "https://realidad-aumentada-afe8f.firebaseio.com",
+    "project_id": "realidad-aumentada-afe8f",
+    "storage_bucket": "realidad-aumentada-afe8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979484860170:android:cd031262c1411f691a64f3",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979484860170-s28urhsckaq9hkcil06fhefm3q8g25qj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDspRGLlVI2U8U2FG9bEhjtQ2Loi5ad9nM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979484860170-s28urhsckaq9hkcil06fhefm3q8g25qj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

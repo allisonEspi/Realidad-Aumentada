@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
@@ -21,6 +22,7 @@ android {
 repositories {
     flatDir{
         dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+
     }
 }
 
@@ -28,10 +30,11 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     implementation project(':capacitor-android')
-    testImplementation "junit:junit:$junitVersion"
+    testImplementation "junit:junit:4.12"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
 }
 
 apply from: 'capacitor.build.gradle'
@@ -44,3 +47,5 @@ try {
 } catch(Exception e) {
     logger.warn("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
 }
+
+apply plugin: 'com.google.gms.google-services'
