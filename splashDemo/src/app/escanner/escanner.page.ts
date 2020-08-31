@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from "src/app/services/auth.service";
 import { PhotoService } from '../services/camara.service';
-import {QRScanner} from 'cordova-plugin-qrscanner';
-
+//import {QRScanner} from 'cordova-plugin-qrscanner';
+import { DocumentScanner} from '@ionic-native/document-scanner';
 
 @Component({
   selector: 'app-escanner',
@@ -13,7 +13,11 @@ export class EscannerPage implements OnInit {
 
   constructor(private authservice:AuthService,public photoService: PhotoService) { }
 
-  public scanner(){
+
+  public documentscanner(){
+    DocumentScanner.scanDoc
+  }
+ /* public scanner(){
 
     QRScanner.prepare(onDone); // show the prompt
 
@@ -38,7 +42,7 @@ export class EscannerPage implements OnInit {
   
     QRScanner.scan();
     QRScanner.show();
-  }
+  }*/
   ngOnInit() {
   }
   logout(){
