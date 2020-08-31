@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {QRScanner} from 'cordova-plugin-qrscanner'
+//import {QRScanner} from 'cordova-plugin-qrscanner';
+import { DocumentScanner, DocumentScannerOptions } from '@ionic-native/document-scanner';
 @Component({
   selector: 'app-scanner',
   templateUrl: './scanner.page.html',
@@ -9,9 +10,11 @@ export class ScannerPage implements OnInit {
 
   constructor() { }
 
-  
+  public documentscanner(){
+    DocumentScanner.scanDoc
+  }
 
-  public scanner(){
+  /*public scanner(){
 
     QRScanner.prepare(onDone); // show the prompt
 
@@ -34,9 +37,17 @@ export class ScannerPage implements OnInit {
       }
     }
   
-    QRScanner.scan();
+    QRScanner.scan(displayContents);
+    function displayContents(err, text){
+      if(err){
+        // an error occurred, or the scan was canceled (error code `6`)
+      } else {
+        // The scan completed, display the contents of the QR code:
+        alert(text);
+      }
+    }
     QRScanner.show();
-  }
+  }*/
   ngOnInit() {
   }
 }
