@@ -14,13 +14,13 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'Locales cercanos',
-      url: '/folder/Vista',
+      url: '/local',
       icon: 'tablet-portrait'
     },
     {
       title: 'Escanear Imagen',
-      url: '/folder/Escaner',
-      icon: 'md-qr-scanner'
+      url: '/scanner',
+      icon: 'scan'
     },
     {
       title: 'Favoritos',
