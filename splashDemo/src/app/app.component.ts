@@ -26,19 +26,24 @@ export class AppComponent implements OnInit {
       icon: 'scan'
     },
     {
+      title: 'Establecimientos',
+      url: '/locales',
+      icon: 'business'
+    },
+    {
       title: 'Favoritos',
       url: '/favoritos',
       icon: 'heart'
     },
     {
-      title: 'Perfil',
-      url: '/perfil',
-      icon: 'person'
-    },
-    {
       title: 'Notificaciones',
       url: '/notificaciones',
       icon: 'notifications'
+    },
+    {
+      title: 'Perfil',
+      url: '/perfil',
+      icon: 'person'
     }
   ];
   

@@ -50,6 +50,11 @@ const routes: Routes = [
     path: 'notificaciones',
     canActivate: [AuthGuard],
     loadChildren: () => import('./notificaciones/notificaciones.module').then( m => m.NotificacionesPageModule)
+  },
+  {
+    path: 'locales',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./locales/locales.module').then( m => m.LocalesPageModule)
   }
 ];
 
