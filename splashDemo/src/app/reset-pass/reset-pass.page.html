@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color=primary>
+    <ion-title>
+      Olvidaste tu contraseña?
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/..">
+        <ion-icon name="arrow-back" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <div class="reset">
+    <ion-label  >
+      <p class="texto">
+      Escribe tu correo para enviarte las instrucciones para recuperar tu contraseña</p>
+    </ion-label>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="email" name="email"  placeholder="Ingrese su correo electronico"></ion-input>
+    </ion-item>
+    <section>
+      <ion-button size="medium" (click)="sendLinkReset()">Recuperar Contrasena</ion-button>
+    </section>
+  </div>
+</ion-content>

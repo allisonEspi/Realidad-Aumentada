@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from "../services/auth.service";
 import { Router } from "@angular/router"
+import { ToastController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-login',
@@ -8,15 +10,34 @@ import { Router } from "@angular/router"
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
+  email: string;
+  password: string;
   
-  constructor(private authService: AuthService,  private router : Router) { }
+  constructor(private authService: AuthService,  private router : Router, private toastC: ToastController) { }
 
+  doLogin()
+  {
+    this.authService.login(this.email, this.password).then( () =>{
+      this.router.navigate(['/folder']);
+    }).catch(err => {
+      this.toastMessage("Los datos son incorrectos o no existe el usuario");
+    })
+  }
+
+  async toastMessage(message: string){
+    const toast = await this.toastC.create({
+      message: message,
+      duration: 2000
+    });
+
+    toast.present();
+  }
 
   loginGoogle() {
     
     this.authService.loginWithGoogle().then( () =>{
-      this.router.navigate(['/folder/inbox']);
+      this.toastMessage("Ingreso Exitoso");
+      this.router.navigate(['/folder']);
     }).catch(err =>{
       alert('algo salio mal contacta a soporte')
     })
@@ -25,7 +46,8 @@ export class LoginPage implements OnInit {
   loginFacebook() {
 
     this.authService.loginWithFacebook().then( () =>{
-      this.router.navigate(['/folder/inbox']);
+      this.toastMessage("Ingreso Exitoso");
+      this.router.navigate(['/folder']);
     }).catch(err =>{
       alert('algo salio mal contacta a soporte')
     })

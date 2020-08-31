@@ -14,36 +14,30 @@
 <ion-content padding>
   <ion-item>
     <ion-label>
-      Nombres
+      Nombre Completo
     </ion-label>
-    <ion-input type="text" ></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>
-      Apellidos
-    </ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="text" [(ngModel)]="name" name="name" required="true"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>
       Correo
     </ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="text" [(ngModel)]="email" name="email" required="true"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>
-      Contrasena
+      Contraseña
     </ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="password" [(ngModel)]="password" name="password" required="true"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>
-      Repetir contrasena
+      Repetir contraseña
     </ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="password" required="true"></ion-input>
   </ion-item>
   <section>
-    <ion-button size="medium" (click)="onRegister()">Registrarse</ion-button>
+    <ion-button size="medium" (click)="doRegister()">Registrarse</ion-button>
   </section>
   
 </ion-content>

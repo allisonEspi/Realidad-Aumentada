@@ -4,6 +4,9 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { Router } from "@angular/router"
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -14,33 +17,34 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'Locales cercanos',
-      url: '/local',
-      icon: 'tablet-portrait'
+      url: '/folder',
+      icon: 'locate'
     },
     {
       title: 'Escanear Imagen',
-      url: '/scanner',
+      url: '/escanner',
       icon: 'scan'
+      
+    },
+    {
+      title: 'Establecimientos',
+      url: '/locales',
+      icon: 'business'
     },
     {
       title: 'Favoritos',
-      url: '/folder/Favoritos',
+      url: '/favoritos',
       icon: 'heart'
     },
     {
-      title: 'Perfil',
-      url: '/folder/Perfil',
-      icon: 'person'
-    },
-    {
       title: 'Notificaciones',
-      url: '/folder/Notificaciones',
+      url: '/notificaciones',
       icon: 'notifications'
     },
     {
-      title: 'Cerrar Sesion',
-      url: '/login',
-      icon: 'log-out'
+      title: 'Perfil',
+      url: '/perfil',
+      icon: 'person'
     }
   ];
   
@@ -60,10 +64,13 @@ export class AppComponent implements OnInit {
     });
   }
 
+
   ngOnInit() {
     const path = window.location.pathname.split('folder/')[1];
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
   }
+
+  
 }
