@@ -8,7 +8,7 @@ import { ActionSheetController } from '@ionic/angular';
 })
 export class Tab1Page implements OnInit{//
 
-  constructor(public photoService: PhotoService/* public actionSheetController: ActionSheetController*/) { }
+  constructor(public photoService: PhotoService , public actionSheetController: ActionSheetController) { }
 
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
@@ -16,13 +16,10 @@ export class Tab1Page implements OnInit{//
 
   ngOnInit() {
     
-    //this.photoService.loadSaved();
+    this.photoService.loadSaved();
   }
 
-  
-
-
-/* public async showActionSheet(photo, position) {
+  public async showActionSheet(photo, position) {
   const actionSheet = await this.actionSheetController.create({
     header: 'Photos',
     buttons: [{
@@ -42,8 +39,6 @@ export class Tab1Page implements OnInit{//
     }]
   });
   await actionSheet.present();
-} */
+} 
 }
-
-
 
