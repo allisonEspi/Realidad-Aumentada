@@ -10,8 +10,8 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  email: string;
-  password: string;
+  public email: string;
+  public password: string;
   
   constructor(private authService: AuthService,  private router : Router, private toastC: ToastController) { }
 

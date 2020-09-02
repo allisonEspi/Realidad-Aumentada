@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PhotoService } from '../services/photo.service';
+import { PhotoService } from '../services/camara.service';
 
 import { AuthService } from "src/app/services/auth.service";
 import { ActionSheetController } from '@ionic/angular';

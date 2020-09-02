@@ -55,6 +55,11 @@ const routes: Routes = [
     path: 'locales',
     canActivate: [AuthGuard],
     loadChildren: () => import('./locales/locales.module').then( m => m.LocalesPageModule)
+  },
+  {
+    path: 'local',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./local/local.module').then( m => m.LocalPageModule)
   }
 ];
 

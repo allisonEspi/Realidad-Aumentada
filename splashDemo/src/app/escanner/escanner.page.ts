@@ -15,7 +15,7 @@ export class EscannerPage implements OnInit {
 
 
   public documentscanner(){
-    DocumentScanner.scanDoc
+    DocumentScanner.scanDoc()
   }
  /* public scanner(){
 

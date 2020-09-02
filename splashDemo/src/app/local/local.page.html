@@ -1,91 +1,82 @@
-
+<ion-header>
+  <ion-toolbar color=primary>
+    <ion-title>
+      TuristView
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/locales">
+        <ion-icon name="arrow-back" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
  <ion-content fullscreen>
  <ion-card>
-  <img src="assets/img/local-kfc.png" />
+  
   <ion-card-header>
-    
-    <ion-card-title>KFC</ion-card-title>
-    <ion-card-subtitle>Comida rápida</ion-card-subtitle>
+    <ion-card-title>Kentucky Fried Chicken</ion-card-title>
+    <ion-card-subtitle>Restaurantes</ion-card-subtitle>
   </ion-card-header>
+  <img src="assets/img/local-kfc.png" />
 
   <ion-card-content>
+      <section>
+        <ion-label>9 de Octubre - Guayaquil</ion-label>
+      </section>
+      <section>
+        <ion-label> 32 Seguidores | 15 visitas</ion-label>
+      </section>
+      <section>
+        <ion-segment color="tertiary" value="favorite">
+          <ion-segment-button value="call">
+            <ion-icon name="call"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="like">
+            <ion-icon name="heart"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="fav">
+            <ion-icon name="bookmark"></ion-icon>
+          </ion-segment-button>
+        </ion-segment>
+        
+      </section>
+      <section>
+        <h2>Acerca de nosotros</h2>
+        <ion-label text-wrap>Visita nuestros locales y conoce nuestras promociones</ion-label>
+      </section>
+      <section>
+        <div class="star-rating">
+          <a >★</a>
+          <a >★</a>
+          <a >★</a>
+          <a >★</a>
+          <a >★</a>
+          </div>
+      </section>
+      
+    
+
   </ion-card-content>
-  <ion-item>
-    <ion-icon name="star-outline" slot="start"></ion-icon>
-    <ion-icon name="heart-outline" slot="end"></ion-icon>
-  </ion-item>
   
 </ion-card>
 
-  <ion-card>
-    <img src="assets/img/naturisimo.png" />
-    <ion-card-header>
-      
-      <ion-card-title>Naturisimo </ion-card-title>
-      <ion-item  lines="none">
-        <ion-icon slot="start" name='star-outline'></ion-icon>
-        <ion-label>4.8</ion-label>
-      </ion-item>
-      
-     
-      <ion-card-subtitle>Comida saludable</ion-card-subtitle>
-      <ion-card-subtitle>Desayunos</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-item>
-      
-      <ion-button fill="none" slot="start">
-        <ion-icon slot="icon-only" name="star-outline"></ion-icon>
-      </ion-button>
-     
-      
-    </ion-item>
-  </ion-card>
-  <ion-card>
-    <img src="assets/img/Mcdonalds.png" />
-    <ion-card-header>
-      
-      <ion-card-title>McDonalds </ion-card-title>
-      <ion-item  lines="none">
-        <ion-icon slot="start" name='star-outline'></ion-icon>
-        <ion-label>5.8</ion-label>
-      </ion-item>
-     
-      <ion-card-subtitle>Comida rapida</ion-card-subtitle>
-
-    </ion-card-header>
-  
-    <ion-item>
-      
-      <ion-button fill="none" slot="start">
-        <ion-icon slot="icon-only" name="star-outline"></ion-icon>
-      </ion-button>
-     
-      
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/img/pizzahut.png" />
-    <ion-card-header>
-      
-      <ion-card-title>Pizza Hut </ion-card-title>
-      <ion-item  lines="none">
-        <ion-icon slot="start" name='star-outline'></ion-icon>
-        <ion-label>6.8</ion-label>
-      </ion-item>
-      
-      <ion-card-subtitle>Pizzeria</ion-card-subtitle>
-
-    </ion-card-header>
-  
-    <ion-item>
-      
-      <ion-button fill="none" slot="start">
-        <ion-icon slot="icon-only" name="star-outline"></ion-icon>
-      </ion-button>
-     
-      
-    </ion-item>
-  </ion-card>
+<ion-fab horizontal="start" vertical="bottom" slot="fixed">
+  <ion-fab-button color="dark">
+    <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button color="light">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="light">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="light">
+      <ion-icon name="share-social"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="light">
+      <ion-icon name="logo-google"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
 
