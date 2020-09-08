@@ -23,6 +23,7 @@ export class RegisterPage implements OnInit {
   doRegister()
   {
     this.authService.register(this.email, this.password, this.name).then( () =>{
+      this.authService.registraBase(this.email, this.email);
       this.router.navigate(['/login']);
     }).catch(err => {
       alert('algo ocurrio');
@@ -59,5 +60,6 @@ export class RegisterPage implements OnInit {
     });
     await actionSheet.present();
   }
+  
 
 }

@@ -5,6 +5,8 @@ import { GooglePlus } from '@ionic-native/google-plus/ngx'
 import { auth } from 'firebase'
 import { Router } from "@angular/router";
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
+import { Observable } from 'rxjs';
+import { HttpClient} from '@angular/common/http';
 
 
 @Injectable({
@@ -12,18 +14,20 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 })
 
 export class AuthService{
-
+  url = 'http://eibesana96.pythonanywhere.com';
     constructor( private google : GooglePlus, 
                 private AFauth: AngularFireAuth, 
                 private router : Router,
                 private fb: Facebook,
-                private db : AngularFirestore){}
+                private db : AngularFirestore,
+                private http: HttpClient){}
 
     login(email:string, password:string){
 
         return new Promise((resolve, rejected) =>{
           this.AFauth.signInWithEmailAndPassword(email, password).then(user => {
             resolve(user);
+            
           }).catch(err => rejected(err));
         });
     
@@ -70,4 +74,31 @@ export class AuthService{
         })
 
     }
+
+    getInfo(): Observable<any>{
+     
+      return this.http.get(this.url+'/Categoria/?format=json');
+      
+      
+    }
+
+    registraBase(usuario:string, email:string) {
+      var headers = new Headers();
+      headers.append("Accept", 'application/json');
+      headers.append('Content-Type', 'application/json' );
+  
+      let postData = {
+                        "username": usuario,
+                        "email": email
+                    }
+  
+      this.http.post("http://eibesana96.pythonanywhere.com/users/", postData)
+        .subscribe(data => {
+          console.log(data['_body']);
+         }, error => {
+          console.log(error);
+        });
+    }
+
+    
 }

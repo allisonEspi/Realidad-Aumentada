@@ -10,73 +10,28 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
- <ion-content fullscreen>
- <ion-card>
-  
-  <ion-card-header>
-    <ion-card-title>Kentucky Fried Chicken</ion-card-title>
-    <ion-card-subtitle>Restaurantes</ion-card-subtitle>
-  </ion-card-header>
-  <img src="assets/img/local-kfc.png" />
 
-  <ion-card-content>
-      <section>
-        <ion-label>9 de Octubre - Guayaquil</ion-label>
-      </section>
-      <section>
-        <ion-label> 32 Seguidores | 15 visitas</ion-label>
-      </section>
-      <section>
-        <ion-segment color="tertiary" value="favorite">
-          <ion-segment-button value="call">
-            <ion-icon name="call"></ion-icon>
-          </ion-segment-button>
-          <ion-segment-button value="like">
-            <ion-icon name="heart"></ion-icon>
-          </ion-segment-button>
-          <ion-segment-button value="fav">
-            <ion-icon name="bookmark"></ion-icon>
-          </ion-segment-button>
-        </ion-segment>
-        
-      </section>
-      <section>
-        <h2>Acerca de nosotros</h2>
-        <ion-label text-wrap>Visita nuestros locales y conoce nuestras promociones</ion-label>
-      </section>
-      <section>
-        <div class="star-rating">
-          <a >★</a>
-          <a >★</a>
-          <a >★</a>
-          <a >★</a>
-          <a >★</a>
-          </div>
-      </section>
+
+ <ion-content fullscreen id="InfoLocal">
       
-    
-
-  </ion-card-content>
+  </ion-content>
+    <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+      <ion-fab-button color="dark">
+        <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button color="light">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon name="share-social"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon name="logo-google"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
   
-</ion-card>
-
-<ion-fab horizontal="start" vertical="bottom" slot="fixed">
-  <ion-fab-button color="dark">
-    <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
-  </ion-fab-button>
-  <ion-fab-list side="top">
-    <ion-fab-button color="light">
-      <ion-icon name="logo-facebook"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button color="light">
-      <ion-icon name="logo-twitter"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button color="light">
-      <ion-icon name="share-social"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button color="light">
-      <ion-icon name="logo-google"></ion-icon>
-    </ion-fab-button>
-  </ion-fab-list>
-</ion-fab>
-

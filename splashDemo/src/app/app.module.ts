@@ -17,6 +17,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { GooglePlus } from "@ionic-native/google-plus/ngx"
 import { Facebook,  } from '@ionic-native/facebook/ngx';
+import {HttpClientModule } from '@angular/common/http';
+import { HTTP } from '@ionic-native/http/ngx';
 
 
 
@@ -28,6 +30,7 @@ import { Facebook,  } from '@ionic-native/facebook/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFirestoreModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig), //Modulo 1 a importa
     AngularFireAuthModule // Modulo 2 a importar
   ], 
@@ -36,6 +39,7 @@ import { Facebook,  } from '@ionic-native/facebook/ngx';
     StatusBar,
     SplashScreen,
     GooglePlus,
+    HTTP,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

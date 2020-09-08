@@ -4,5 +4,11 @@
     "capacitor": {},
     "cordova": {}
   },
-  "type": "angular"
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path":"/categorias",
+      "proxyUrl":"http://eibesana96.pythonanywhere.com"
+    }
+  ]
 }

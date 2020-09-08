@@ -1,0 +1,7 @@
+{
+    "/api/*":{
+        "target":"http://eibesana96.pythonanywhere.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
